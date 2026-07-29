@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ff9eb5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="我的工作台">
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlx1NjIxMVx1NzY4NFx1NWRlNVx1NGY1Y1x1NTNmMCIsICJzaG9ydF9uYW1lIjogIlx1NWRlNVx1NGY1Y1x1NTNmMCIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmMGY1IiwgInRoZW1lX2NvbG9yIjogIiNmZjllYjUiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBWDMwbEVRVlI0bk8zZFRYSWN4N1VHMEtSQ1M5Qk9QSGdqYklBYWVRbFVoR2R2T1o0NVFseUNSdUlHTUhvRDcwUjc0QnZJTUVHb0FYUjFaMWJlbjNNaUhBNkhwV1oxVnRmOXZzcHFnR01BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCQVRSOTJId0JyZmYzMTk2Kzdqd0hJNjhNdlA4dUpvcHpZNUFROHNKT0NrSmNUbDRpd0J6SlFDbkp3a2dJVCtFQUZDa0ZNVGtvZ0FoL29RQ0dJd1VuWVRPZ0RuU2tEKzFqNERZUSt3RjhwQStleTJDY1MvQUR2VXdUT1laRVhFL29BdDFNRzFyR3dpd2grZ0hrVWdma3M2R1NDSDJBZFJXQWVDem1KNEFjNGp5SndQd3Q0SjhFUHNJOGljRHNMZHlQQkR4Q0hJbkNjQlR0SThBUEVwUWhjejBKZFNmQUQ1S0VJdk8rSDNRZVFnZkFIeU1YY2ZwK0c5QVlmSUlEODdBWmNabEV1RVB3QTlTZ0MzL01JNEFYaEQxQ1QrZjQ5QmVBWkh3NkEyc3o1YjJ5SERCOElnSTY2UHhKb3Z3TWcvQUY2Nmo3L1d4ZUE3aWNmb0x2T09kQnkrNlB6Q1FmZ3NtNlBCTnJ0QUFoL0FDN3BsZyt0Q2tDM2t3dkFNWjF5b2swQjZIUlNBYmhkbDd4b1VRQzZuRXdBNXVpUUcrVUxRSWVUQ01CODFmT2o3RGNlcTU4NFh2SHA0eGlmdit3K0NxcnkrV3FyNGs4SWxOd0JFUDVOZmZyNC9YL0RURDVmclZYTWxYSUZvT0pKNGdhR05EUDVQREhxNVV1cEFsRHQ1SENBQWMyWmZON2FxcFF6WlFwQXBaUENKSVkwTS9nYzhVS1Z2Q2xUQUdqc3JRRnRlSE1QbnkwS0sxRUFxclF4Ym5ETkVEYW91WVhQRm0rb2tEdnBDMENGazhBSkRHcU84SG5oQ3RuekozVUJ5TDc0M09ub2tEYlV1WWJQRlFka3pxRzBCU0R6b2pPQm9Vc2tQbyt0WmMyamxBVWc2MklUZ0VITlczdyt1RkhHWEVwWEFESXVNcFBkTzZRTmVTN3h1ZUpPMmZJcFhRR0FLUXhybnZONW9LRlVCU0JidTJLQm1ZUGEwR2NNbnltbXlwUlRhUXBBcGtWbGtSWEQxY0R1eldlS0JiTGtWWW9Da0dVeEFXQ01ITG1Wb2dEQTByc3FkMnc5K1V6UlhQZ0NrS0ZGc2RnWnc5VEE3c1ZuaWhORXo2L1FCU0Q2NGxHTWdkMkQ4OHlKSXVkWTJBSVFlZEU0MGRuRFdqalU1dlBFQmxIekxHd0JnRzBNN1pxY1YvaE95QUlRdFMxeE1nT2JDbnlPR1RGekxXUUJnTzFEYy9lZnoxeTd6K2Z1UHg4dUNGY0FJcllrbWpLMGEzQWVDU0phdm9VcUFORVdoMDBpRGV4SXg4SnhrYzVmcEdOaG0wZzVGNm9BUU1naEdmR1llRi9FOHhieG1HZ3JUQUdJMUlyZ0x3enVYSnd2QW91U2QyRUtBQmphdE9CelRoQWhDa0NVTmdSdk1yaHpjSjVJSUVMdWhTZ0FrR1pvWnpuT3JyS2NueXpIU1duYkMwQ0VGc1JtMllaaHR1UHRJdHQ1eVhhOFRMYzcvN1lYQUVqSjhJN0YrWUREdGhhQTNlMkhBRElQN3N6SFhrbm04NUQ1MkpsaVp3N2FBV0Fmd3c5Y0IyeXpyUUM0KzZjRXczc3Y2MDhCdS9MUURnQjdWQnJjbGQ1TEpwWFd2ZEo3SVkwdEJjRGRQK1VZNE9leTNoU3pJeGZ0QUhDK3FzTzc2dnVLcHVvNlYzMWZoSFY2QVhEMzMxejFJVmY5L2UxV2ZYMnJ2ei9lZEhZKzJnRUFnSVlVQU03VDVlNm15L3M4VzVkMTdmSSsyZTdVQW1EN3Y3RnVRNjNiKzEydDIzcDJlNy84MTVrNWFRY0FWakhFNTdDT3NNUnBCY0RkZjJPZEIzam45ejVENS9Yci9ONmJPeXN2N1FEQWFnYjViYXdiTEtVQXNKWWhEcmR6L2JEUUtRWEE5bjlUaHRjMzF1SVk2L1dOdFdqcGpOeTBBd0JuTWNpdlk1M2dGQW9BYXhqaWwxbVh0MW1meTZ3TEN5d3ZBTGIvR3pLczNtWjlMck11YjdNKzdhek9UenNBc0lOaC9qM3JBYWRUQUpqTElJZDFYRjlNcEFEQUxvYjVuNndEYkxHMEFIaiszNHhCZmx6M05ldisvbTloelZwWm1hTjJBSmpEVUxwZDE3WHIrcjVuc0haTW9BQkFCTjBHZXJmM0N3RXBBTnpQTUoranl6cDJlWityV1VmdXRLd0FlUDdmaENFRSs3aitXbGlWcDNZQUlKTHFBNzM2KzRORUZBQnVaNWl2VVhWZHE3NnYzYXdyTjFJQUlLSnFRNzNhKzRFQ2Z0eDlBQ1Jsb00vMStjdnVJMWpyMHZ2ekdacm4wOGY2bnlHbSs3RGlSWDBCc0RpRCt6NEc5ZXQ4dHU3anMxWGFoMTkrbnByWmRnQmdKUVA1R0RzRmNCb0ZnR01NNDljSit6V1VndXQ1Rk1BQkNnRFhNM1MvTVdUM1VncGVwd1J3SlFVQTNtT1k1cUFVd0NFS0FOZnBNa2lGZlMxZFM0RmRBSzZnQU5DWEFkbFQxMUlBTHlnQXZLL0NjQlQydktWaUtiQUx3RHVtL3g0QXZ3T2dtSXhEME5CakZkY0RtODM4WFFCMkFNak5jT05NRlhjS2FFc0I0SFhSQnB1d0o2TG9wY0NqQUY2aEFIRFo3Z0ZtWUpGWnRGS2dCSENCQXNCK0JoTWRSQ3NGdEtjQThGY3JoNUt3aDIvT0xBVjJBWGhCQVdBZHd3YU9zMVBBU1JRQXZuZnJvQkgyc002c1VtQVhnR2NVQUw2NWRxQVlJTERmcmFWQUNlQS9GQURlWmxCQUhoNGZjSUFDd0ovY0ZlUjM1cUQzV1lucm43KzkvYi9mOHI5L24zc3NseHc1bnBmT09MNUcvQ3BneUNEalhaeVNzTjQ5WVhxdGUwSTMrdkVsTlBOWEFTc0FFRVhHa0wrVmNuQzdNMEwxTmRlRWJmVGpTMDRCZ093NmhmMjFsSUxYN1F6VjF6d1AyK2pIVjRnQ0FOa0kvT082RjRLSW9acFZvVEtnQUVCMEFuKytMb1ZBOEs5VG9BZ29BQkNOd0Q5ZnhVSWcvTmRMWGdJVUFJaEE2TWVSdlF3SS92TWxMUUlLQU93ZzhQUElWQWlFL3o0SlM0QUNBR2NSK3ZsRkxRT0NQNDVFUldCbUFmaGgxZ3RCS1o4K0N2OHFJcDVMNFI5TDAvTmhCd0NlUkFzSjF0bTVLOUEwYkZKSXNCTmdCd0JtaW5pSHlGcTd6cm53ajYzWitiRURRRThDbjVkVzd3bzBDNWZVQXU4RTJBR0FXN25iNXpVclB4dkNQNWNtNThzT0FEMElmWTZhdFNOUUpVeisrT1A2Zi9hbm45WWR4NWtDN2dUTTNBSDRjZFlMUVVpQ24xczlmWGFpL2hqaEdZNkUvbXYvWHBVeVVKQWRBR29TL014MlN4SEllUGQvYStoZkkyTVpDTFlMNERzQThCclArRm5sNkdkTCtKLy8raXRrUEk5WDhnaUFHb1ErWjZuNGFPRE1ZSDc2c3pMdUJoUmpCNERjM1BHenkxdWZ2VXgzamJ2dXlqUHRCbVE2bndmWUFTQW5vVThVbVhjRWRvZndIMy9ZQ2RqSWx3REpSZkFUM2QvK3Nmc0lyck03L0ovTFVnSUNmQ0hRbHdEcFNmakRISkhDZjR4NHg5T0VSd0RFSi9nQnBsTUFpRXZ3dzN4Ujc3WjlIK0IwSGdFUWsvQW5veXpQLzdsTnNaOEdzQU5BTElJZjFvbDY5Ly9FTHNDcDdBQVFoL0FIT0kwZEFQWVQvQUNuc3dQQVhzSWZZQXM3QU93aCtBRzJzZ1BBK1lRL3dIWUtBT2NTL2dBaGVBVEFPUVEvN1BmVFQ3Ri9GTkNQQUo3S0RnRHJDWCs2K1BlL2RoOEJLd1g0eTRCbVVnQllTL2hETEZIdnNxTWVWMkVLQU9zSWY0Q3dmQWVBK1FRL3hCYnR1d0R1L3Jld0E4QmN3cC91c253UElFcm9Sam1POXhSNy9qK0dBc0JNd2g5eTJSMit1Ly84NWhRQTVoRCs4RTJXWFlBeDlvVndwdkF2ZVBjL2h1OEFNSVB3aDl5ZXd2aU03d1ZrQ3Y3aTdBQndIK0VQbDJYYUJYaXlPcHd6aG4vUnUvOHhGQUR1SWZ6aGJWbEx3Tk4vSXI3ZW1RcUgveGdlQVhBcjRRLzFQUS90STQ4SE1vWjlRd29BeHdsL3VONi8velhHMy82eCt5anUxeTNVaTkvOWorRVJBRWNKZnpndTQ2T0F6aHFFL3hnS0FFY0lmN2lkRXBCRGsvQWZRd0hnV3NJZjdxY0V4TllvL01kUUFMaUc4SWQ1bElDWW1vWC9HQW9BN3hIK01KOFNFRXZEOEIvRFR3SHdGdUVQNnp5VmdBby9JWkJWMCtCL1lnZUF5NFEvbk1OdXdCN053MzhNT3dCY0l2emhYSFlEemlQNC84c09BTjhUL3JDUDNZQzFoUDkzN0FEd2pmQ0gvZXdHekNmNEwxSUErSlB3aDFpZTd3WkVMQVBQUS9XZnYrMDdqdGNJL1hjcEFBRFJSU2tEcjRWcWxESWc5QTlSQUhEM0Q1bWNYUWFPaHVyWlpVRG8zMHdCNkU3NFExNlh2alI0VHltWUhhYVhYdStlVWlEc3AxSUFPaFArVU04dFAwbncrY3Y4NDNpTkVBL0Rqd0YySmZ5QkorWkJTd29BQURTa0FIU2s3UU12bVF2dEtBRGR1TWlCMTVnUHJTZ0FuYmk0Z2ZlWUUyMG9BQURRa0FMUWhWWVBYTXU4YUVFQjZNREZEQnhsYnBTbkFBQkFRd3BBZFZvOGNDdnpvelFGb0RJWEwzQXZjNlFzQlFBQUdsSUFxdExhZ1ZuTWs1SVVnSXBjck1CczVrbzVDZ0FBTktRQVZLT2xBNnVZTDZVb0FBRFFrQUpRaVhZT3JHYk9sS0VBVk9HaUJNNWkzcFNnQUFCQVF3cEFCZG80Y0Raekp6MEZBQUFhVWdDeTA4S0JYY3lmMUJRQUFHaElBY2hNK3daMk00ZlNVZ0FBb0NFRklDdXRHNGpDUEVwSkFRQ0FoaFNBakxSdElCcHpLUjBGQUFBYVVnQ3kwYktCcU15blZCUUFBR2hJQVFDQWhoU0FUR3l2QWRHWlUya29BQURRa0FLUWhWWU5aR0ZlcGFBQUFFQkRDZ0FBTlBUajdnUGdDcmJUVHZQdzhQRHVQL1A0K0hqQ2tYQUw1eStRVHgvSCtQeGw5MUh3QmdXQTlxNEpqZGYrZVdHeW4vTUh0L2t3K3dXLy92cjcxOW12MlpxNy8yV09Cc2RiQk1uNW5MOGs3QUpNOWVHWG42Zmx0aDBBMnBrWkhDOWZVNUNzNS96QkhMNEVTQ3Nyd3VQTTErL08rWU41RklESWJQOVBkZFp3RnlKck9IOUptV05oS1FDMGNQWlFGeUp6T1g4d253SkFlYnVHdVJDWncvbUROUlNBcUd5YlRiRjdpTy8rODdQYnZYNjcvL3d5ekxPUUZBREtpaks4b3h4SE5sSFdMY3B4d0d3S0FBQTBwQUJRVXJTN3RtakhFMTIwOVlwMlBEQ0RBaENSNTJWQU5lWmFPQW9BNVVTOVc0dDZYTkZFWGFlb3h3VzNVZ0FBb0NFRklCcmJaRUJWNWxzb0NnQ2xSTittalg1OHUwVmZuK2pIQjBjb0FBRFFrQUlBQUEwcEFKRjRQZ1pVWjg2Rm9RQUFRRU1LQUFBMHBBQUFRRU1LQUFBMHBBQkU0WXN4UUJmbVhRZ0tBS1U4UGo3dVBvUTNSVCsrM2FLdlQvVGpneU1VQUFCb1NBRUE0Q0svK3JpMkgzY2ZBT3M5UER5MDJycDhmSHdNT2JnNm5ZTjdPSDk3UkZ4ejFsSUFtcmgwY1ZjZmFNQmx3cDR4eHZndyt3Vy8vdnI3MTltdldkN2liOFFldWRncmxZSklRNjdTdXA3RitadGp4am91ZS8rZnY2eDUzY0krL1BMenROeTJBMURjMFl2ZlRnSGtGYWswRVo4Q3dMdXlsb0lvejVJenJGVkV6dC9iSXF3TnVTa0EzQ1JMS2RnZEloSFhKQlBuNzA5bnJrR1U5OHg2dmdNUXdjbS9GYXZqTU5rUklsSGVld1dkemwrcjY5TjNBQTZiK1IwQUJTQ0NBTDhXczhQUTZmQWVLNnQ0L2lxK3AwTVVnTU1VZ0dvQ0ZJQkxLZzZuTTk1VHlFRmJST2J6Vi9GNnVwc0NjSmdDVUUzUUFuQkpoU0cyOGoya0dieUpaVGgvRmE2VFV5Z0FoL2t4UUxhNU5HeFdEYnRWWHpSOGVvMlp4NTE2Q0NmVCtmeGxPVTV5c0FPd1c2SzcveU5XbFlJVkEvQ2VZeldROTR0NC9rTC84cDFvN0FJY1lnZUE4TTdjS2JqWDgyTzk1aGpURCtiLysvdnIvOS8vL0hiZWNVd1M4ZndkL2ZIRjlKOHBVbElBT00yOXBlQ3N3VjNXVzhILzhwOUpXQVRHeUhIK01od2pQU2dBYkpWcHB5Q3RhNEwvdFg4bmFSR0lRdGdUbVFKQU9FckJSTGVFLzh0L1h3bTRpZkFudWg5Mkh3QmN3ekM5d2IzaFAvdDFnRkFVQUtob2RtZ3JBVkNPQWdBQURTa0FVTTJxdTNXN0FGQ0tBZ0FBRFNrQVVNbnF1M1M3QUZDR0FnQUFEU2tBQU5DUUFnQUFEU2tBQU5DUUFnQUFEU2tBQU5DUUFnQ1ZyUDZMZS96RlFGQ0dBZ0FBRFNrQVVNMnF1M1IzLzFDS0FnQUFEU2tBVU5Ic3UzVjMvMUNPQWdCVnpRcHQ0UThsS1FDN2ZmNnkrd2lvN043d0Z2NnNaUDV0OWVQdUF3QVdld3J4STMrVG4rQ0g4aFFBNk9LYUlpRDRvUTBGQUxvUjhzRHdIUUFBYU1rT0FNQmtEdzhQdXcvaGRJK1BqN3NQZ1lNVWdLUU1HQUR1NFJFQUFEU2tBQUJBUXdwQUJINFpCdENOdWJlZEFnQUFEZmtTSU1Ca3ZyQktCZ3BBVWdZTUFQZndDQUFBR2xJQUFLQWhCU0FLMzRnRnVqRHZRbEFBQUtBaEJRQUFHbElBQUtBaEJRQUFHbElBSXZIRkdLQTZjeTRNQlFBQUdsSUFBS0FoQlFBQUdsSUFvdkY4REtqS2ZBdEZBUUNBaGhRQUFHaElBWWpJTmhsUWpia1dqZ0lBQUEwcEFBRFFrQUlBQUEwcEFGRjVYZ1pVWVo2RnBBQUFRRU1LQUFBMHBBQkVadHNNeU00Y0Mwc0JBSmpzNGVGaDl5SEF1MzdjZlFEd25vZUhoL0g0K0xqN01PQ1FTeVhBNTVoSUZJRG9QbjhaNDlQSDNVZHhHbmRPVk5hdUZOaitEMDBCWUJ0aFQwVkhQOWZ0U2dGaGZKajlnbDkvL2YzcjdOZGtwTjhGbUJIMmhpSVpyQ3EyNlQ3Lzd2NlgrUERMejlOeTJ3NEEwN216aC9uc0ZEQ2JBc0JkaEQxODcxSW9yN3BPbEFMdTRSRkFKcHNmQTV3WjlvWVkxWlcrbm16L0wrTVJBTXVWSGs0UWdKMENkck1Ea00yQ1hRQmhEM0dsdXo3ZC9TOWxCNENicFJzbTBKeWRBbFpSQUFvVDlsRFRtYVdBdWhTQWJBTDhaa0JoRC9HRUtBVzIvMU5SQUhpVHNJZTg3aTBGcnYvYWZBa3dxeXQzQVZ6c3dIdGVteE9IWm9LNy8xUDRFaUIzRS9iQWt4Q1BEemlkQXBEVmdlOENDSHZnS0hmLzlmMncrd0JZUy9nRGNJa0NrSm5XRGV4bURxV2xBQUJBUXdwQWR0bzNzSXY1azVvQ0FBQU5LUUFWYU9IQTJjeWQ5QlFBQUdoSUFhaENHd2ZPWXQ2VW9BQlU0cUlFVmpObnlsQUFBS0FoQmFBYTdSeFl4WHdwUlFFQWdJWVVnSXEwZEdBMmM2VWNCYUFxRnlzd2kzbFNrZ0lBQUEwcEFKVnA3Y0M5ekpHeUZJRHFYTHpBcmN5UDBoUUFBR2hJQWVoQWl3ZU9NamZLVXdDNmNERUQxekl2V2xBQUFLQWhCYUFUclI1NGp6blJoZ0xRallzYmVJMzUwSW9DMEpHTEhIakpYR2hIQVFDQWhoU0FyclI5NElsNTBKSUMwSm1MSGpBSDJsSUF1blB4UTErdS85WVVBQXdCNk1oMTM1NENBQUFOS1FEOHlkMEE5T0Y2WnlnQVBHY29RSDJ1Yy81REFlQjdoZ1BVNWZybUdRV0F2eklrb0I3WE5TOG9BRnhtV0VBZHJtY3VVQUI0bmFFQitibU9lWVVDd05zTUQ4akw5Y3NiRkFEZVo0aEFQcTViM3FFQWNCM0RCUEp3dlhJRkJZRHJHU29Rbit1VUt5a0FIR080UUZ5dVR3NVFBRGpPa0lGNFhKY2NwQUJ3RzhNRzRuQTljZ01GZ05zWk9yQ2Y2NUFiS1FEY3gvQ0JmVngvM0VFQjRINkdFSnpQZGNlZEZBRG1NSXpnUEs0M0psQUFtTWRRZ3ZWY1oweWlBRENYNFFUcnVMNlk2TU9LRi8zNjYrOWZWN3d1eVh6NnVQc0lvQWJCenhqand5OC9UODFzT3dDc1kyakIvVnhITEtJQXNKYmhCYmR6L2JDUUFzQjZoaGdjNTdwaHNSOTNId0JOUEEwejN3dUF0d2wrVG1JSGdITVpidkE2MXdjblVnQTRueUVIZitXNjRHUWVBYkNIUndMd0o4SFBKa3QyQUdiL3JDS0ZHWDUwNXZQUGxWYmtxaDBBOXJNYlFEZUNud0I4QjRBNERFVTY4RGtuQ0RzQXhHSTNnS29FUDhIWUFTQW13NUpLZko0SmFPbVg5ZnlsUUV4aE40Q3NCRDhUclBwaXZVY0F4T2V4QU5rSWZoTHdDSUE4REZVeThEa2xDVHNBNUdJM2dLZ0VQOGtzLzRVOXZnZkFVb29BdXdsK0ZscjVpL1hzQUpDYkhRRjJFZndrcHdCUWd5TEFXUVEvUlNnQTFLSUlzSXJncDVoVC90SWUzd05nRzBXQWV3bCtObG45Rit2WkFhQTJPd0xjU3ZCVG5BSkFENG9BMXhMOE5ISEtJNEF4UEFZZ0dFV0Fsd1EvZ2F6ZS9oL0REZ0JkUFIvMnlrQmZRcC9HRkFEd2VLQWZ3US9uUFFJWXcyTUFFbEVHNmhINkpISEc5djhZZGdEZ01yc0NkUWgrdU9qVUhZQXg3QUtRbURLUWg5QW5xYlB1L3Nld0F3RFhleGtxQ2tFY0FoOE9Vd0RnVm42U1lDK2hEM2M1L1JIQUdCNEQwSUJDTUovQXA3Z3p0Ly9Ic0FNQWEzaGNjRCtCRDB0dDJRRVl3eTRBelNrRWZ5WHdhZXpzdS84eDdBREFIcGZDcmxNcEVQYXczYllkZ0RIc0FzRFZNcFlESVE5WDJYSDNQNFlkQU1qaG1qQTlzeVFJZDBodjZ3N0FHSFlCQU9ocjE5My9HR1A4c09zUEJnRDIyVjRBZHJZZkFOaGxkLzV0THdBQXdQbENGSURkTFFnQXpoUWg5MElVQUFEZ1hHRUtRSVEyQkFDclJjbTdNQVVBQURoUHFBSVFwUlVCd0FxUmNpNVVBUmdqMXVJQXdDelI4aTFjQVFBQTFndFpBS0sxSkFDNFI4UmNDMWtBQUlDMXdoYUFpRzBKQUk2S21tZGhDOEFZY1JjTkFLNFJPY2RDRjRBeFlpOGVBTHdtZW42Rkx3QUF3SHdwQ2tEMEZnVUF6MlhJclJRRllJd2Npd2tBV2ZJcVRRRVlJOCtpQXRCVHBweEtWUUFBZ0RuU0ZZQk03UXFBUHJMbFU3b0NNRWErUlFhZ3RveTVsTElBakpGenNRR29KMnNlcFMwQVkrUmRkQUJxeUp4RHFRdkFHTGtYSDRDOHN1ZFArZ0l3UnY2VEFFQXVGWEtuUkFFQUFJNHBVd0FxdERFQTRxdVNOMlVLd0JoMVRnb0FNVlhLbVZJRllJeGFKd2VBT0tybFM3a0NNRWE5a3dUQVhoVnpwZHdiZXVucnI3OS8zWDBNQU9SVU1maWZsTndCZUs3eXlRTmduZXI1VWI0QWpGSC9KQUl3VjRmY2FGRUF4dWh4TWdHNFg1ZThhRk1BeHVoelVnRzRUYWVjYUZVQXh1aDFjZ0c0WHJkOGFQVm1YL0lUQWdCMEMvNG43WFlBbnV0NjBnSDRVK2NjYUYwQXh1aDk4Z0U2Nno3L1c3LzVsendTQUtpdmUvQS9hYjhEOEp3UEJVQnQ1dnczQ3NBTFBod0FOWm52MzdNWWIvQklBQ0Evd1grWlJibUNJZ0NRaitCL20wY0FWL0FoQXNqRjNINmZCVHJJYmdCQVhJTC9laGJxUm9vQVFCeUMvemdMZGlkRkFHQWZ3WDg3Q3plSklnQndIc0YvUHdzNG1TSUFzSTdnbjhkQ0xxSUlBTXdqK09lem9Jc3BBZ0MzRS96cldOZ1RLUU1BN3hQNjU3RElHeWdDQUg4bCtNOWxzVGRUQm9ET2hQNCtGajRRWlFEb1FPakg0Q1FFcGhBQUZRajhtSnlVUkJRQ0lBT0JuNE9UbEp4U0FPd2s3UE55NG9wVEVJQjdDSGdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBSUxuL0J5QWUvcnJwNVF0b0FBQUFBRWxGVGtTdVFtQ0MiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=">
+    <title>我的工作台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --pink: #ff9eb5; --pink-light: #fff0f5; --pink-dark: #ff6b8a; --red: #ff4d6d; --yellow: #ffe082; }
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: linear-gradient(180deg, #fff0f5 0%, #ffe4ec 100%); min-height: 100vh; overscroll-behavior-y: none; }
+        .safe-top { padding-top: env(safe-area-inset-top); }
+        .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+        .kitty-card { background: white; border-radius: 24px; box-shadow: 0 4px 20px rgba(255, 107, 138, 0.12); border: 2px solid #ffe4ec; }
+        .kitty-btn { background: linear-gradient(135deg, #ff9eb5 0%, #ff6b8a 100%); color: white; border-radius: 20px; box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3); transition: all 0.2s; }
+        .kitty-btn:active { transform: scale(0.96); }
+        .kitty-btn-outline { background: white; color: #ff6b8a; border: 2px solid #ff9eb5; border-radius: 20px; }
+        .nav-drawer { transform: translateX(-100%); transition: transform 0.25s ease; }
+        .nav-drawer.open { transform: translateX(0); }
+        .nav-overlay { opacity: 0; pointer-events: none; transition: opacity 0.25s ease; }
+        .nav-overlay.open { opacity: 1; pointer-events: auto; }
+        .nav-item { transition: all 0.15s; border-radius: 16px; }
+        .nav-item.active { background: #fff0f5; color: #ff4d6d; font-weight: 700; }
+        .page { display: none; animation: fadeIn 0.25s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .task-checkbox { appearance: none; -webkit-appearance: none; width: 24px; height: 24px; min-width: 24px; border: 2px solid #ffb7c5; border-radius: 8px; cursor: pointer; position: relative; }
+        .task-checkbox:checked { background: #ff9eb5; border-color: #ff9eb5; }
+        .task-checkbox:checked::after { content: '✓'; position: absolute; color: white; font-size: 14px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; }
+        .task-item.completed .task-text { text-decoration: line-through; color: #bbb; }
+        .task-item { transition: all 0.2s; }
+        .task-item:active { transform: scale(0.99); }
+        .tag { display: inline-flex; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .tag-pink { background: #fff0f5; color: #ff4d6d; }
+        .tag-blue { background: #e3f2fd; color: #1976d2; }
+        .tag-green { background: #e8f5e9; color: #388e3c; }
+        .tag-yellow { background: #fff8e1; color: #f9a825; }
+        input, select, textarea { border: 2px solid #ffe4ec; border-radius: 16px; background: #fffafb; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #ff9eb5; box-shadow: 0 0 0 3px rgba(255, 158, 181, 0.2); }
+        .floating-add { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #ff9eb5 0%, #ff6b8a 100%); color: white; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 6px 20px rgba(255, 107, 138, 0.4); z-index: 40; }
+        .floating-add:active { transform: scale(0.92); }
+        .decoration { position: fixed; pointer-events: none; z-index: -1; }
+        .bow { font-size: 60px; opacity: 0.08; }
+        ::-webkit-scrollbar { width: 0; height: 0; }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="decoration bow" style="top: 80px; right: -10px;">🎀</div>
+    <div class="decoration bow" style="bottom: 120px; left: -15px; transform: rotate(-20deg);">🎀</div>
+
+    <header class="md:hidden fixed top-0 left-0 right-0 z-30 safe-top" style="background: rgba(255, 240, 245, 0.95); backdrop-filter: blur(10px); border-bottom: 2px solid #ffe4ec;">
+        <div class="flex items-center justify-between px-4 h-14">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleNav()" class="p-2 -ml-2 rounded-full active:bg-pink-100">
+                    <svg class="w-6 h-6" fill="none" stroke="#ff6b8a" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+                <span class="font-bold text-lg" style="color: #ff4d6d;" id="pageTitle">今日任务</span>
+            </div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #ff9eb5, #ff6b8a);"><span class="text-white text-lg">🐱</span></div>
+        </div>
+    </header>
+
+    <div id="navOverlay" class="nav-overlay fixed inset-0 bg-black/30 z-40 md:hidden" onclick="toggleNav()"></div>
+    <nav id="navDrawer" class="nav-drawer fixed top-0 left-0 bottom-0 w-[75%] max-w-[280px] z-50 md:hidden flex flex-col safe-top safe-bottom" style="background: linear-gradient(180deg, #fff0f5 0%, #ffffff 100%); border-right: 2px solid #ffe4ec;">
+        <div class="p-5 text-center border-b-2 border-pink-100">
+            <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-2" style="background: linear-gradient(135deg, #ff9eb5, #ff6b8a);"><span class="text-4xl">🐱</span></div>
+            <p class="font-bold text-lg" style="color: #ff4d6d;">我的工作台</p>
+            <p class="text-xs text-gray-500">Hello Kitty 风格版</p>
+        </div>
+        <div class="flex-1 py-4 px-3 space-y-2" id="mobileNav">
+            <a href="#" data-page="today" class="nav-item active flex items-center gap-3 px-4 py-3 text-sm" style="color: #ff4d6d;" onclick="switchPage('today'); return false;"><span class="text-xl">📝</span>今日任务</a>
+            <a href="#" data-page="hot" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('hot'); return false;"><span class="text-xl">🔥</span>抖音热点</a>
+            <a href="#" data-page="review" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('review'); return false;"><span class="text-xl">✨</span>内容复盘</a>
+            <a href="#" data-page="inspiration" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('inspiration'); return false;"><span class="text-xl">💡</span>每日灵感</a>
+            <a href="#" data-page="reminder" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('reminder'); return false;"><span class="text-xl">⏰</span>提醒设置</a>
+        </div>
+    </nav>
+
+    <div class="flex h-screen md:flex-row flex-col">
+        <aside class="hidden md:flex w-64 flex-col" style="background: linear-gradient(180deg, #fff0f5 0%, #ffffff 100%); border-right: 2px solid #ffe4ec;">
+            <div class="p-6 text-center border-b-2 border-pink-100">
+                <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-2" style="background: linear-gradient(135deg, #ff9eb5, #ff6b8a);"><span class="text-4xl">🐱</span></div>
+                <p class="font-bold text-lg" style="color: #ff4d6d;">我的工作台</p>
+            </div>
+            <nav class="flex-1 py-4 px-3 space-y-2" id="desktopNav">
+                <a href="#" data-page="today" class="nav-item active flex items-center gap-3 px-4 py-3 text-sm" style="color: #ff4d6d;" onclick="switchPage('today'); return false;">📝 今日任务</a>
+                <a href="#" data-page="hot" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('hot'); return false;">🔥 抖音热点</a>
+                <a href="#" data-page="review" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('review'); return false;">✨ 内容复盘</a>
+                <a href="#" data-page="inspiration" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('inspiration'); return false;">💡 每日灵感</a>
+                <a href="#" data-page="reminder" class="nav-item flex items-center gap-3 px-4 py-3 text-sm text-gray-600" onclick="switchPage('reminder'); return false;">⏰ 提醒设置</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 overflow-auto md:pt-0 pt-14 safe-bottom">
+            <div class="p-4 md:p-6 max-w-4xl mx-auto">
+                <div class="md:hidden mb-4"><p class="text-xs" style="color: #ff9eb5;" id="mobileDate"></p></div>
+
+                <!-- 今日任务 -->
+                <div id="page-today" class="page active">
+                    <div class="kitty-card p-5 mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="font-bold text-lg" style="color: #ff4d6d;">📋 今日待办</h2>
+                            <span class="tag tag-pink" id="taskProgress">0/0 完成</span>
+                        </div>
+                        <div class="space-y-3" id="todayTasks"></div>
+                        <button onclick="showTaskModal()" class="kitty-btn w-full py-3 mt-4 font-medium">+ 添加今日任务</button>
+                    </div>
+                    <div class="kitty-card p-5" style="background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);">
+                        <h3 class="font-bold mb-3" style="color: #ff4d6d;">🎯 今日重点</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed" id="dailyFocus">完成存钱计划、每天拍一个视频、英语练习。坚持就是胜利！</p>
+                    </div>
+                </div>
+
+                <!-- 抖音热点 -->
+                <div id="page-hot" class="page">
+                    <div class="kitty-card p-5 mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="font-bold text-lg" style="color: #ff4d6d;">🔥 抖音热点收藏</h2>
+                            <span class="tag tag-pink">手动添加</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">看到喜欢的爆款视频？把链接和标题复制下来，App 会帮你生成二创建议。</p>
+                        <div class="space-y-3" id="hotVideos"></div>
+                        <button onclick="showHotModal()" class="kitty-btn w-full py-3 mt-4 font-medium">+ 添加爆款视频</button>
+                    </div>
+                    <div class="kitty-card p-5">
+                        <h3 class="font-bold mb-3" style="color: #ff4d6d;">🎬 今日热门选题推荐</h3>
+                        <div id="dailyHotTopics" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <!-- 内容复盘 -->
+                <div id="page-review" class="page">
+                    <div class="kitty-card p-5 mb-4">
+                        <h2 class="font-bold text-lg mb-4" style="color: #ff4d6d;">✨ 内容复盘助手</h2>
+                        <p class="text-sm text-gray-500 mb-4">输入你这次发布的内容数据，App 会自动分析优点和优化建议。</p>
+                        <div class="grid grid-cols-2 gap-3 mb-4">
+                            <div><label class="text-xs text-gray-500">播放量</label><input type="number" id="rvViews" class="w-full px-3 py-2 text-sm mt-1" placeholder="0"></div>
+                            <div><label class="text-xs text-gray-500">点赞</label><input type="number" id="rvLikes" class="w-full px-3 py-2 text-sm mt-1" placeholder="0"></div>
+                            <div><label class="text-xs text-gray-500">评论</label><input type="number" id="rvComments" class="w-full px-3 py-2 text-sm mt-1" placeholder="0"></div>
+                            <div><label class="text-xs text-gray-500">转发</label><input type="number" id="rvShares" class="w-full px-3 py-2 text-sm mt-1" placeholder="0"></div>
+                        </div>
+                        <div class="mb-4"><label class="text-xs text-gray-500">视频内容简介（可选）</label><textarea id="rvDesc" class="w-full px-3 py-2 text-sm mt-1 h-20" placeholder="简单描述这期视频讲了什么..."></textarea></div>
+                        <button onclick="generateReview()" class="kitty-btn w-full py-3 font-medium">🪄 生成复盘建议</button>
+                        <div id="reviewResult" class="mt-4 space-y-3"></div>
+                    </div>
+                    <div class="kitty-card p-5">
+                        <div class="flex items-center justify-between mb-3"><h3 class="font-bold" style="color: #ff4d6d;">📊 历史数据</h3><span class="text-xs text-gray-400">最近7条</span></div>
+                        <div id="reviewHistory" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <!-- 每日灵感 -->
+                <div id="page-inspiration" class="page">
+                    <div class="kitty-card p-5 mb-4" style="background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);">
+                        <div class="flex items-center gap-2 mb-3"><span class="text-2xl">💡</span><h2 class="font-bold text-lg" style="color: #ff4d6d;">今日灵感</h2></div>
+                        <p class="text-base font-medium text-gray-800 mb-2" id="dailyInspirationTitle"></p>
+                        <p class="text-sm text-gray-600" id="dailyInspirationDesc"></p>
+                    </div>
+                    <div class="kitty-card p-5 mb-4">
+                        <div class="flex items-center justify-between mb-4"><h3 class="font-bold" style="color: #ff4d6d;">📝 我的灵感笔记</h3><button onclick="showInspirationModal()" class="kitty-btn px-4 py-2 text-sm font-medium">+ 添加</button></div>
+                        <div id="inspirationNotes" class="space-y-3"></div>
+                    </div>
+                    <div class="kitty-card p-5">
+                        <h3 class="font-bold mb-3" style="color: #ff4d6d;">🎲 随机选题 generator</h3>
+                        <button onclick="randomTopic()" class="kitty-btn-outline w-full py-3 font-medium mb-3">🎰 抽取一个选题</button>
+                        <div id="randomTopicResult" class="p-4 rounded-2xl text-center text-sm font-medium" style="background: #fff0f5; color: #ff4d6d; min-height: 60px;">点击按钮获取今日随机选题</div>
+                    </div>
+                </div>
+
+                <!-- 提醒设置 -->
+                <div id="page-reminder" class="page">
+                    <div class="kitty-card p-5">
+                        <h2 class="font-bold text-lg mb-4" style="color: #ff4d6d;">⏰ 每日提醒</h2>
+                        <p class="text-sm text-gray-500 mb-4">设置每天提醒时间，到点会通知你做任务、看热点。</p>
+                        <div class="flex items-center gap-3 mb-4">
+                            <input type="time" id="reminderTime" class="px-4 py-3 text-lg flex-1" value="09:00">
+                            <button onclick="saveReminder()" class="kitty-btn px-5 py-3 font-medium">保存</button>
+                        </div>
+                        <p id="reminderStatus" class="text-sm text-gray-600 mb-4"></p>
+                        <button onclick="requestNotify()" class="kitty-btn-outline w-full py-3 font-medium mb-3">🔔 开启通知权限</button>
+                        <div class="p-4 rounded-2xl text-xs text-gray-500" style="background: #fff8fb;">
+                            💡 提示：苹果手机需要在 设置 → 通知 → Safari 中允许通知，才能收到提醒。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-20"></div>
+            </div>
+        </main>
+    </div>
+
+    <button class="floating-add md:hidden" onclick="handleAdd()">+</button>
+
+    <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="kitty-card p-5 w-full max-w-sm" id="modalContent"></div>
+    </div>
+
+    <script>
+        const todayStr = new Date().toLocaleDateString('zh-CN', {year:'numeric', month:'long', day:'numeric', weekday:'long'});
+        document.getElementById('mobileDate').textContent = todayStr;
+        let currentPage = 'today';
+        const pageTitles = { today: '今日任务', hot: '抖音热点', review: '内容复盘', inspiration: '每日灵感', reminder: '提醒设置' };
+
+        // 默认任务
+        const defaultTasks = [
+            { text: '💰 存钱计划', done: false },
+            { text: '🎬 每天拍一个视频', done: false },
+            { text: '🔤 英语练习 30 分钟', done: false },
+            { text: '✂️ 视频剪辑发布', done: false },
+            { text: '📊 复盘今日数据', done: false }
+        ];
+
+        // 每日灵感库
+        const inspirationLib = [
+            { title: '反差萌挑战', desc: '做一个和你平时形象完全不一样的视频，比如平时文静就拍一段搞怪的。' },
+            { title: '假如系列', desc: '「假如我只有 100 元过一天」「假如我穿越到古代」，容易引发评论。' },
+            { title: '干货合集', desc: '把 3-5 个相关小技巧做成合集，封面写「第 X 个太实用了」。' },
+            { title: '情绪共鸣', desc: '讲一个打工/生活/恋爱中的小吐槽，让观众觉得「我也是这样」。' },
+            { title: '跟拍热梗', desc: '找最近抖音很火的 BGM 或梗，加上你自己的特色翻拍。' },
+            { title: '教程类', desc: '教一个你擅长的小技能：穿搭技巧、省钱方法、手机功能等。' },
+            { title: '好物分享', desc: '分享一个最近买到的好东西，真实使用感受比硬广更受欢迎。' },
+            { title: '日常 vlog', desc: '记录你的一天，重点展示 1-2 个有趣或有价值的片段。' }
+        ];
+
+        // 热门选题推荐
+        const hotTopics = [
+            '「打工人的早晨」系列：记录起床到出门的 5 分钟',
+            '「挑战 30 天」：存钱/早起/学英语等打卡类',
+            '「当我妈问我钱去哪了」：搞笑生活场景',
+            '「沉浸式回家」：展示独居/下班后的生活',
+            '「月薪 X 千的一天」：引发打工人共鸣',
+            '「租房改造」：小成本房间布置',
+            '「穿搭合集」：一周通勤/约会穿搭'
+        ];
+
+        function toggleNav(force) {
+            if (typeof force === 'boolean') navOpen = force;
+            else navOpen = !navOpen;
+            document.getElementById('navDrawer').classList.toggle('open', navOpen);
+            document.getElementById('navOverlay').classList.toggle('open', navOpen);
+        }
+
+        function switchPage(page) {
+            currentPage = page;
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + page).classList.add('active');
+            document.getElementById('pageTitle').textContent = pageTitles[page];
+            document.querySelectorAll('#mobileNav .nav-item, #desktopNav .nav-item').forEach(el => {
+                el.classList.remove('active');
+                el.classList.add('text-gray-600');
+                el.style.color = '';
+                if (el.dataset.page === page) {
+                    el.classList.add('active');
+                    el.classList.remove('text-gray-600');
+                }
+            });
+            toggleNav(false);
+            if (page === 'hot') renderHot();
+            if (page === 'review') renderReviewHistory();
+            if (page === 'inspiration') renderInspiration();
+            if (page === 'reminder') loadReminder();
+        }
+
+        function handleAdd() {
+            if (currentPage === 'today') showTaskModal();
+            else if (currentPage === 'hot') showHotModal();
+            else if (currentPage === 'inspiration') showInspirationModal();
+        }
+
+        function save(key, data) { localStorage.setItem('kk_' + key, JSON.stringify(data)); }
+        function load(key, def) { try { return JSON.parse(localStorage.getItem('kk_' + key)) || def; } catch(e) { return def; } }
+
+        // ===== 今日任务 =====
+        function renderTasks() {
+            const tasks = load('tasks', defaultTasks);
+            const c = document.getElementById('todayTasks');
+            if (!tasks.length) { c.innerHTML = '<p class="text-sm text-gray-400 text-center py-4">今天还没有任务，添加一个吧 🎀</p>'; }
+            else {
+                c.innerHTML = tasks.map((t, i) => '<div class="task-item flex items-center gap-3 p-3 rounded-2xl ' + (t.done ? 'bg-pink-50' : 'bg-gray-50') + '"><input type="checkbox" class="task-checkbox" ' + (t.done ? 'checked' : '') + ' onchange="toggleTask(' + i + ')"><span class="task-text flex-1 text-sm ' + (t.done ? 'text-gray-400' : 'text-gray-700 font-medium') + '">' + escapeHtml(t.text) + '</span><button onclick="deleteTask(' + i + ')" class="text-red-400 text-sm">🗑</button></div>').join('');
+            }
+            const done = tasks.filter(t => t.done).length;
+            document.getElementById('taskProgress').textContent = done + '/' + tasks.length + ' 完成';
+        }
+        function toggleTask(i) { const tasks = load('tasks', defaultTasks); tasks[i].done = !tasks[i].done; save('tasks', tasks); renderTasks(); }
+        function deleteTask(i) { const tasks = load('tasks', defaultTasks); tasks.splice(i, 1); save('tasks', tasks); renderTasks(); }
+        function showTaskModal() { showModal('<h3 class="font-bold text-lg mb-4" style="color:#ff4d6d;">🎀 添加任务</h3><input type="text" id="taskInput" placeholder="今天要做什么？" class="w-full px-4 py-3 text-sm mb-4"><div class="flex gap-3"><button onclick="hideModal()" class="flex-1 py-2 rounded-2xl border-2 border-pink-200 text-gray-600 text-sm font-medium">取消</button><button onclick="addTask()" class="flex-1 py-2 rounded-2xl kitty-btn text-sm font-medium">添加</button></div>'); setTimeout(() => document.getElementById('taskInput').focus(), 100); }
+        function addTask() { const v = document.getElementById('taskInput').value.trim(); if (!v) return; const tasks = load('tasks', defaultTasks); tasks.push({text: v, done: false}); save('tasks', tasks); hideModal(); renderTasks(); }
+
+        // ===== 抖音热点 =====
+        function renderHot() {
+            const videos = load('hotVideos', []);
+            const c = document.getElementById('hotVideos');
+            if (!videos.length) c.innerHTML = '<p class="text-sm text-gray-400 text-center py-4">还没有收藏爆款视频 🎬</p>';
+            else c.innerHTML = videos.map((v, i) => '<div class="p-4 rounded-2xl bg-pink-50"><div class="flex justify-between items-start mb-2"><p class="font-medium text-sm text-gray-800">' + escapeHtml(v.title) + '</p><button onclick="deleteHot(' + i + ')" class="text-red-400 text-xs">🗑</button></div><a href="' + escapeHtml(v.url) + '" target="_blank" class="text-xs text-blue-500 break-all block mb-2">' + escapeHtml(v.url) + '</a><div class="p-3 rounded-xl bg-white text-xs text-gray-600"><span class="tag tag-green">二创建议</span><p class="mt-1">' + generateRemixIdea(v.title) + '</p></div></div>').join('');
+            document.getElementById('dailyHotTopics').innerHTML = hotTopics.map((t, i) => '<div class="p-3 rounded-xl bg-yellow-50 text-sm text-gray-700 flex justify-between items-center"><span>' + (i+1) + '. ' + t + '</span><button onclick="useHotTopic(' + i + ')" class="text-xs kitty-btn px-3 py-1 rounded-full">采用</button></div>').join('');
+        }
+        function generateRemixIdea(title) {
+            const ideas = ['可以结合自身经历改编成真实故事版', '换个场景翻拍，比如从户外换成家里', '做成「普通人挑战」系列', '加上反转结局，前 3 秒抓眼球', '做成教程/干货版，更有收藏价值'];
+            return ideas[Math.floor(Math.random() * ideas.length)];
+        }
+        function useHotTopic(i) { const v = hotTopics[i]; const tasks = load('tasks', defaultTasks); if (!tasks.find(t => t.text.includes(v))) { tasks.push({text: '🎬 二创选题：' + v, done: false}); save('tasks', tasks); alert('已添加到今日任务！'); renderTasks(); } }
+        function deleteHot(i) { const videos = load('hotVideos', []); videos.splice(i, 1); save('hotVideos', videos); renderHot(); }
+        function showHotModal() { showModal('<h3 class="font-bold text-lg mb-4" style="color:#ff4d6d;">🔥 收藏爆款视频</h3><input type="text" id="hotTitle" placeholder="视频标题/简介" class="w-full px-4 py-3 text-sm mb-3"><input type="text" id="hotUrl" placeholder="粘贴抖音链接" class="w-full px-4 py-3 text-sm mb-4"><div class="flex gap-3"><button onclick="hideModal()" class="flex-1 py-2 rounded-2xl border-2 border-pink-200 text-gray-600 text-sm font-medium">取消</button><button onclick="addHot()" class="flex-1 py-2 rounded-2xl kitty-btn text-sm font-medium">收藏</button></div>'); }
+        function addHot() { const title = document.getElementById('hotTitle').value.trim(); const url = document.getElementById('hotUrl').value.trim(); if (!title) return; const videos = load('hotVideos', []); videos.unshift({title, url, date: new Date().toLocaleDateString('zh-CN')}); save('hotVideos', videos); hideModal(); renderHot(); }
+
+        // ===== 内容复盘 =====
+        function generateReview() {
+            const views = parseInt(document.getElementById('rvViews').value) || 0;
+            const likes = parseInt(document.getElementById('rvLikes').value) || 0;
+            const comments = parseInt(document.getElementById('rvComments').value) || 0;
+            const shares = parseInt(document.getElementById('rvShares').value) || 0;
+            const desc = document.getElementById('rvDesc').value.trim();
+            const likeRate = views > 0 ? (likes / views * 100).toFixed(2) : 0;
+            const commentRate = views > 0 ? (comments / views * 100).toFixed(2) : 0;
+            const suggestions = [];
+            if (views < 500) suggestions.push('播放量偏低，建议优化封面和标题，前 3 秒要足够抓人。');
+            if (likes < views * 0.03) suggestions.push('点赞率不足 3%，可以在视频中加入「点赞收藏」的引导。');
+            if (comments < views * 0.01) suggestions.push('评论互动少，结尾多问一个开放性问题引导评论。');
+            if (shares < views * 0.005) suggestions.push('转发率低，内容可以更有干货/收藏价值，让人想保存。');
+            if (!desc) suggestions.push('补充视频内容简介，便于更精准分析优化方向。');
+            if (suggestions.length === 0) suggestions.push('整体数据不错！保持这个风格，尝试做系列化内容。');
+            const good = ['选题方向符合日常/创作规划', '坚持发布值得鼓励', desc ? '内容有明确的主题' : ''];
+            const resultHtml = '<div class="p-4 rounded-2xl bg-pink-50"><h4 class="font-bold mb-2" style="color:#ff4d6d;">📈 数据表现</h4><p class="text-sm text-gray-600">点赞率 ' + likeRate + '%，评论率 ' + commentRate + '%</p></div><div class="p-4 rounded-2xl bg-green-50"><h4 class="font-bold mb-2 text-green-700">👍 优点</h4><ul class="text-sm text-gray-600 list-disc pl-4">' + good.filter(g => g).map(g => '<li>' + g + '</li>').join('') + '</ul></div><div class="p-4 rounded-2xl bg-yellow-50"><h4 class="font-bold mb-2 text-yellow-700">🔧 优化建议</h4><ul class="text-sm text-gray-600 list-disc pl-4">' + suggestions.map(s => '<li>' + s + '</li>').join('') + '</ul></div>';
+            document.getElementById('reviewResult').innerHTML = resultHtml;
+            // 保存历史
+            const history = load('reviewHistory', []);
+            history.unshift({ date: new Date().toLocaleDateString('zh-CN'), views, likes, comments, shares, desc });
+            if (history.length > 7) history.pop();
+            save('reviewHistory', history);
+            renderReviewHistory();
+        }
+        function renderReviewHistory() {
+            const history = load('reviewHistory', []);
+            const c = document.getElementById('reviewHistory');
+            if (!history.length) c.innerHTML = '<p class="text-sm text-gray-400 text-center py-4">还没有复盘记录</p>';
+            else c.innerHTML = history.map(h => '<div class="flex justify-between items-center p-3 rounded-xl bg-gray-50 text-sm"><span class="text-gray-500">' + h.date + '</span><span class="font-medium" style="color:#ff4d6d;">👍 ' + h.likes + ' 💬 ' + h.comments + '</span></div>').join('');
+        }
+
+        // ===== 每日灵感 =====
+        function renderInspiration() {
+            const idx = new Date().getDay() % inspirationLib.length;
+            const today = inspirationLib[idx];
+            document.getElementById('dailyInspirationTitle').textContent = today.title;
+            document.getElementById('dailyInspirationDesc').textContent = today.desc;
+            const notes = load('inspirationNotes', []);
+            const c = document.getElementById('inspirationNotes');
+            if (!notes.length) c.innerHTML = '<p class="text-sm text-gray-400 text-center py-4">还没有灵感笔记 💭</p>';
+            else c.innerHTML = notes.map((n, i) => '<div class="p-4 rounded-2xl bg-pink-50"><p class="text-sm text-gray-800">' + escapeHtml(n) + '</p><button onclick="deleteInspiration(' + i + ')" class="text-red-400 text-xs mt-2">🗑 删除</button></div>').join('');
+        }
+        function randomTopic() {
+            const t = inspirationLib[Math.floor(Math.random() * inspirationLib.length)];
+            document.getElementById('randomTopicResult').innerHTML = '<p class="font-bold mb-1">' + t.title + '</p><p class="opacity-80">' + t.desc + '</p>';
+        }
+        function showInspirationModal() { showModal('<h3 class="font-bold text-lg mb-4" style="color:#ff4d6d;">💡 添加灵感</h3><textarea id="inspirationInput" placeholder="突然想到的点子..." class="w-full px-4 py-3 text-sm mb-4 h-24"></textarea><div class="flex gap-3"><button onclick="hideModal()" class="flex-1 py-2 rounded-2xl border-2 border-pink-200 text-gray-600 text-sm font-medium">取消</button><button onclick="addInspiration()" class="flex-1 py-2 rounded-2xl kitty-btn text-sm font-medium">添加</button></div>'); }
+        function addInspiration() { const v = document.getElementById('inspirationInput').value.trim(); if (!v) return; const notes = load('inspirationNotes', []); notes.unshift(v); save('inspirationNotes', notes); hideModal(); renderInspiration(); }
+        function deleteInspiration(i) { const notes = load('inspirationNotes', []); notes.splice(i, 1); save('inspirationNotes', notes); renderInspiration(); }
+
+        // ===== 提醒 =====
+        function loadReminder() { const t = load('reminderTime', '09:00'); document.getElementById('reminderTime').value = t; document.getElementById('reminderStatus').textContent = '已设置每天 ' + t + ' 提醒'; }
+        function saveReminder() { const t = document.getElementById('reminderTime').value; save('reminderTime', t); document.getElementById('reminderStatus').textContent = '已设置每天 ' + t + ' 提醒'; scheduleReminder(t); }
+        function requestNotify() { if ('Notification' in window) { Notification.requestPermission().then(p => { if (p === 'granted') alert('通知权限已开启！'); else alert('请在手机设置中允许 Safari 通知。'); }); } }
+        function scheduleReminder(time) {
+            if (!('Notification' in window) || Notification.permission !== 'granted') return;
+            const now = new Date(); const [h, m] = time.split(':'); let next = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0);
+            if (next <= now) next.setDate(next.getDate() + 1);
+            setTimeout(() => { new Notification('🎀 工作台提醒', { body: '该做今天的任务、看热点灵感啦！' }); scheduleReminder(time); }, next - now);
+        }
+
+        // ===== 通用 =====
+        function showModal(content) { document.getElementById('modalContent').innerHTML = content; document.getElementById('modal').classList.remove('hidden'); document.getElementById('modal').classList.add('flex'); }
+        function hideModal() { document.getElementById('modal').classList.add('hidden'); document.getElementById('modal').classList.remove('flex'); }
+        function escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
+        document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) hideModal(); });
+
+        // 初始化
+        renderTasks();
+        const rt = load('reminderTime', '09:00');
+        if ('Notification' in window && Notification.permission === 'granted') scheduleReminder(rt);
+    </script>
+</body>
+</html>

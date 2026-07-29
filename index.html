@@ -142,8 +142,8 @@
                         <!-- Personal Daily -->
                         <div class="magic-card p-5">
                             <div class="flex items-center gap-2 mb-4">
-                                <span class="text-2xl">👑</span>
-                                <h2 class="font-extrabold text-lg" style="color: #E5101A;">个人日常</h2>
+                                <span class="text-2xl">🌟</span>
+                                <h2 class="font-extrabold text-lg" style="color: #E5101A;">每日必做</h2>
                             </div>
                             <div id="personalTasks" class="space-y-3"></div>
                         </div>
@@ -256,9 +256,9 @@
         let currentPage = 'daily';
 
         const personalDefaultTasks = [
-            { text: '🧘 普拉提 1小时', done: false },
-            { text: '🎻 小提琴练习 1小时', done: false },
-            { text: '🔤 英语练习 30分钟', done: false }
+            { text: '💰 存钱计划', done: false },
+            { text: '🥗 减脂推荐：多吃蔬菜/蛋白质/粗粮', done: false },
+            { text: '🚫 减脂禁忌：不吃油炸/奶茶/甜食', done: false }
         ];
 
         const creationDefaultTasks = [
@@ -310,7 +310,7 @@
 
         // ===== 每日计划 =====
         function renderDaily() {
-            const personal = load('personalTasks', personalDefaultTasks);
+            const personal = load('personalTasksV2', personalDefaultTasks);
             const creation = load('creationTasks', creationDefaultTasks);
 
             const pC = document.getElementById('personalTasks');
@@ -359,7 +359,7 @@
         }
 
         function catEatTasks() {
-            const personal = load('personalTasks', personalDefaultTasks);
+            const personal = load('personalTasksV2', personalDefaultTasks);
             const creation = load('creationTasks', creationDefaultTasks);
             const pendingPersonal = personal.map((t, i) => t.done ? -1 : i).filter(i => i !== -1);
             const pendingCreation = creation.map((t, i) => t.done ? -1 : i).filter(i => i !== -1);
@@ -372,7 +372,7 @@
             });
             document.getElementById('catMascot').classList.add('eating');
             setTimeout(() => {
-                save('personalTasks', personal.filter(t => t.done));
+                save('personalTasksV2', personal.filter(t => t.done));
                 save('creationTasks', creation.filter(t => t.done));
                 renderDaily();
                 document.getElementById('catMascot').classList.remove('eating');

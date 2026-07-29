@@ -68,7 +68,6 @@
     </style>
 </head>
 <body>
-    <input type="checkbox" id="menu-toggle" style="display:none;">
     <div class="progress-magic"><div class="progress-magic-fill" id="catProgressBar" style="width: 0%"></div></div>
 
     <!-- Mobile Header -->
@@ -86,9 +85,10 @@
         </div>
     </header>
 
-    <div id="navOverlay" class="nav-overlay fixed inset-0 bg-black/30 z-40 md:hidden" onclick="document.getElementById('menu-toggle').checked=false;"></div>
-
     <div class="flex h-screen md:flex-row flex-col">
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <div id="navOverlay" class="nav-overlay fixed inset-0 bg-black/30 z-40 md:hidden" onclick="document.getElementById('menu-toggle').checked=false;"></div>
+
         <!-- Sidebar -->
         <nav id="navDrawer" class="nav-drawer fixed top-0 left-0 bottom-0 w-[78%] max-w-[280px] z-50 md:relative md:transform-none md:w-64 md:flex flex-col safe-top safe-bottom" style="background: linear-gradient(180deg, #FFF8E7 0%, #FFE4EC 100%); border-right: 3px solid #FFD700;">
             <div class="p-6 text-center border-b-2 border-[#FFE4B5]">
